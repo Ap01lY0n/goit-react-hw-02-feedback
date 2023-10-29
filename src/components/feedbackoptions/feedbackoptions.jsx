@@ -4,18 +4,14 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 const FeedbackOptions = ({ valueButtons, onLeaveFeedback }) => {
-	const handelClickButton = {
-	};
 	return (
 		<div className='buttons'>
 			{valueButtons.map(button => (
 				<button
 					type='submit'
-					key={button}
-					
-					onClick={ i=>{
-						onLeaveFeedback(button);
-						handelClickButton(i);}}
+					key={button}		
+					onClick={ ()=>{
+						onLeaveFeedback(button);}}
 				>
 					{button.toUpperCase()}
 				</button>

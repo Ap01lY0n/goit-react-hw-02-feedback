@@ -14,10 +14,7 @@ class App extends Component {
 		bad: 0,
 	};
   
-	buttons =
-   ['good',
-    'neutral',
-     'bad'];
+
 	FirstSection = 'Please leave feedback';
 	SecondSection = 'Statistics';
 
@@ -41,7 +38,7 @@ class App extends Component {
 			<>
 				<SectionTitle title={this.FirstSection}>
 					<FeedbackOptions
-						valueButtons={this.buttons}
+						valueButtons={Object.keys(this.state)}
 						onLeaveFeedback={this.handlerChangeFeedback}
 					/>
 				</SectionTitle>
